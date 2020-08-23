@@ -79,11 +79,11 @@ export default function Post({
         {/* <SubscribeForm /> */}
       </article>
       <Container noVerticalPadding>
-        <Share
-          url={`${config.siteUrl}/${mdx.frontmatter.slug}/`}
+        {/* <Share
+          url={`${config.siteUrl}/blog/${mdx.frontmatter.slug}/`}
           title={title}
           twitterHandle={config.twitterHandle}
-        />
+        /> */}
         <br />
       </Container>
     </Layout>

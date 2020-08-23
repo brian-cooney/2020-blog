@@ -36,7 +36,7 @@ const Header = ({ siteTitle }) => {
               color: ${theme.colors.black};
               font-weight: 600;
               &:hover {
-                color: white;
+                ${'' /* color: white; */}
                 text-decoration: none;
               }
             `}
