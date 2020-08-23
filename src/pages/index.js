@@ -49,7 +49,7 @@ const Hero = () => {
             text-align: center;
           `}
         >
-          Hello 👋 , I'm an front end engineer with <a href="www.nutmeg.com">nutmeg</a>, the largest digital wealth manager in the UK.
+          Hello 👋 , I'm a front end engineer with <a href="www.nutmeg.com">nutmeg</a>, the largest digital wealth manager in the UK.
         </h1>
         </div>
 
