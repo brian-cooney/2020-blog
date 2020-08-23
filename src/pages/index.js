@@ -8,7 +8,7 @@ import { useTheme } from 'components/Theming'
 import Container from 'components/Container'
 import { rhythm } from '../lib/typography'
 
-import Avatar from '../../src/images/fishing.png' 
+import Avatar from '../../src/images/fishing.png'
 
 const Hero = () => {
   const theme = useTheme()
@@ -28,31 +28,41 @@ const Hero = () => {
           justify-content: center;
         `}
       >
-      <div css={css`
-          text-align: center;
-      `}>
-
-      <img src={Avatar}
-        css={css`
-           width: 300px;
-
-        `}
-       />
-        <h1
+        <div
           css={css`
-            color: ${theme.colors.black};
-            position: relative;
-            z-index: 5;
-            line-height: 1.5;
-            margin: 0;
-            max-width: ${rhythm(30)};
             text-align: center;
           `}
         >
-          Hello 👋 , I'm a front end engineer with <a href="www.nutmeg.com">nutmeg</a>, the largest digital wealth manager in the UK.
-        </h1>
+          <img
+            src={Avatar}
+            css={css`
+              width: 300px;
+            `}
+          />
+          <h1
+            css={css`
+              color: ${theme.colors.black};
+              position: relative;
+              z-index: 5;
+              line-height: 1.5;
+              margin: 0;
+              max-width: ${rhythm(30)};
+              text-align: center;
+            `}
+          >
+            Hello 👋 , I'm a front end engineer with{' '}
+            <a href="www.nutmeg.com">nutmeg</a>, the largest digital wealth
+            manager in the UK.
+          </h1>
+          <p
+            css={css`
+              color: ${theme.colors.black};
+              text-align: center;
+            `}
+          >
+            🚧 Under construction! 🚧
+          </p>
         </div>
-
       </Container>
       <div
         css={css`
@@ -76,13 +86,13 @@ export default function Index({ data: { site, allMdx, file } }) {
   return (
     <Layout site={site}>
       <Hero />
-     
+
       <Container
         css={css`
           padding-bottom: 0;
         `}
       >
-       <hr />
+        <hr />
         {allMdx.edges.map(({ node: post }) => (
           <div
             key={post.id}

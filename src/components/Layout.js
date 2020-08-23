@@ -26,6 +26,7 @@ const getGlobalStyles = theme => {
     a {
       color: ${theme.colors.link};
       text-decoration: none;
+      font-weight: 600;
       &:hover,
       &:focus {
         color: ${theme.colors.link};
