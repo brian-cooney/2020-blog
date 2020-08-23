@@ -8,6 +8,8 @@ import { useTheme } from 'components/Theming'
 import Container from 'components/Container'
 import { rhythm } from '../lib/typography'
 
+import Avatar from '../../src/images/fishing.png' 
+
 const Hero = () => {
   const theme = useTheme()
   return (
@@ -15,7 +17,7 @@ const Hero = () => {
       css={css`
         color: ${theme.colors.white};
         width: 100%;
-        background: ${theme.colors.primary};
+        background: ${theme.colors.gray};
         padding: 20px 0 30px 0;
         display: flex;
       `}
@@ -23,21 +25,34 @@ const Hero = () => {
       <Container
         css={css`
           display: flex;
-          flex-direction: column;
+          justify-content: center;
         `}
       >
+      <div css={css`
+          text-align: center;
+      `}>
+
+      <img src={Avatar}
+        css={css`
+           width: 300px;
+
+        `}
+       />
         <h1
           css={css`
-            color: ${theme.colors.white};
+            color: ${theme.colors.black};
             position: relative;
             z-index: 5;
             line-height: 1.5;
             margin: 0;
-            max-width: ${rhythm(15)};
+            max-width: ${rhythm(30)};
+            text-align: center;
           `}
         >
-          Your blog says the things you want to say.
+          Hello 👋 , I'm an front end engineer with <a href="www.nutmeg.com">nutmeg</a>, the largest digital wealth manager in the UK.
         </h1>
+        </div>
+
       </Container>
       <div
         css={css`
@@ -54,16 +69,20 @@ const Description = styled.p`
   display: inline-block;
 `
 
-export default function Index({ data: { site, allMdx } }) {
+export default function Index({ data: { site, allMdx, file } }) {
+  console.log('data', site)
+
   const theme = useTheme()
   return (
     <Layout site={site}>
       <Hero />
+     
       <Container
         css={css`
           padding-bottom: 0;
         `}
       >
+       <hr />
         {allMdx.edges.map(({ node: post }) => (
           <div
             key={post.id}
@@ -148,6 +167,13 @@ export const pageQuery = graphql`
             slug
             keywords
           }
+        }
+      }
+    }
+    file(relativePath: { eq: "src/images/fishing.png" }) {
+      childImageSharp {
+        fixed(width: 125, height: 125) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

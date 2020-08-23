@@ -33,7 +33,8 @@ const Header = ({ siteTitle }) => {
             to="/"
             aria-label="go to homepage"
             css={css`
-              color: white;
+              color: ${theme.colors.black};
+              font-weight: 600;
               &:hover {
                 color: white;
                 text-decoration: none;
@@ -50,7 +51,7 @@ const Header = ({ siteTitle }) => {
               align-items: center;
               a {
                 text-decoration: none;
-                color: ${theme.colors.white};
+                color: ${theme.colors.black};
                 margin-left: 16px;
                 margin-right: 16px;
               }

@@ -16,6 +16,7 @@ const DefaultMode = styled(FiSun)({
   alignItems: 'center',
   justifyContent: 'center',
   margin: '0',
+
 })
 
 const ThemeToggler = ({ toggleTheme, themeName }) => {
@@ -33,7 +34,7 @@ const ThemeToggler = ({ toggleTheme, themeName }) => {
         margin: 0,
         borderStyle: 'solid',
         borderWidth: '1px',
-        color: theme.colors.white,
+        color: theme.colors.black,
         background: theme.colors.headerBg,
         '@media (hover: hover)': {
           ':hover': {

@@ -65,7 +65,7 @@ const getGlobalStyles = theme => {
     hr {
       margin: 50px 0;
       border: none;
-      border-top: 1px solid ${theme.colors.gray};
+      border-top: 2px solid ${theme.colors.black};
       background: none;
     }
     em {
